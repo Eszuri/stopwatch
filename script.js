@@ -1,6 +1,6 @@
 document.body.style.color = "white";
 document.body.style.backgroundColor = "darkgreen";
-
+document.body.style.overflow = "hidden";
 // var
 let jam;
 let menit;
@@ -8,6 +8,9 @@ let detik;
 let milidetik;
 let interval;
 let titik;
+let spanElement;
+let h1Element;
+let pElement;
 let boolean = true;
 let angka = 0;
 window.addEventListener('load', function (e) {
@@ -87,25 +90,29 @@ document.getElementById('refresh').addEventListener('click', function (e) {
         document.getElementById("mark").style.width = "0rem";
         document.getElementById("mark").style.margin = "0px";
         document.getElementById('str').style.height = "";
+        angka = 0;
+        while (document.getElementById('marker').firstChild) {
+            document.getElementById("marker").removeChild(document.getElementById("marker").firstChild);
+        }
     }
 });
 
 
 // catat waktu
-document.getElementById('mark').addEventListener('click', function (e) {
-    document.getElementById("marker").style.height = "20rem";
+document.getElementById('mark').addEventListener('click', function () {
+    document.getElementById("marker").style.height = "10rem";
     document.getElementById("marker").style.borderRadius = "4px";
-    const spanElement = document.createElement("span");
+    spanElement = document.createElement("span");
     spanElement.classList.add("flex", "m-2", "bg-emerald-500", "rounded");
 
     // Buat elemen <h1>
-    const h1Element = document.createElement("h1");
+    h1Element = document.createElement("h1");
     h1Element.classList.add("w-16", "ml-1", "text-purple-700", "font-extrabold");
     angka += 1; titik = '.';
     h1Element.textContent = angka + titik;
 
     // Buat elemen <p>
-    const pElement = document.createElement("p");
+    pElement = document.createElement("p");
     pElement.classList.add("ml-1");
     pElement.textContent = document.getElementById('Jam').innerHTML + ", " + document.getElementById('Menit').innerHTML + ", " + document.getElementById('Detik').innerHTML + ", " + document.getElementById('MiliDetik').innerHTML;
 
@@ -113,4 +120,4 @@ document.getElementById('mark').addEventListener('click', function (e) {
     spanElement.appendChild(h1Element);
     spanElement.appendChild(pElement);
     document.getElementById('marker').appendChild(spanElement);
-});
+})
