@@ -18,6 +18,10 @@ window.addEventListener('load', function (e) {
     menit = document.getElementById('Menit').innerHTML = parseInt("0");
     detik = document.getElementById('Detik').innerHTML = parseInt("0");
     milidetik = document.getElementById('MiliDetik').innerHTML = parseInt("0");
+    document.getElementById('Jam').style.color = "red";
+    document.getElementById('Menit').style.color = "rgb(0, 253, 8)";
+    document.getElementById('Detik').style.color = "rgb(17, 65, 255)";
+    document.getElementById('MiliDetik').style.color = "white";
 });
 function Start() {
     milidetik += 1;
@@ -101,7 +105,9 @@ document.getElementById('refresh').addEventListener('click', function (e) {
 // catat waktu
 document.getElementById('mark').addEventListener('click', function () {
     document.getElementById("marker").style.height = "10rem";
+    document.getElementById("marker").style.scrollBehavior = "smooth";
     document.getElementById("marker").style.borderRadius = "4px";
+    document.getElementById('marker').scrollTo(0, 99999999999999);
     spanElement = document.createElement("span");
     spanElement.classList.add("flex", "m-2", "bg-emerald-500", "rounded");
 
@@ -113,7 +119,7 @@ document.getElementById('mark').addEventListener('click', function () {
 
     // Buat elemen <p>
     pElement = document.createElement("p");
-    pElement.classList.add("ml-1");
+    pElement.classList.add("ml-1", "text-3xl");
     pElement.textContent = document.getElementById('Jam').innerHTML + ", " + document.getElementById('Menit').innerHTML + ", " + document.getElementById('Detik').innerHTML + ", " + document.getElementById('MiliDetik').innerHTML;
 
     // Masukkan elemen <h1> dan <p> ke dalam elemen <span>
