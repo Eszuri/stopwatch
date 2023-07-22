@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eszuri | Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="w-[95%] mr-auto ml-auto bg-black h-screen">
+        <h1 class="uppercase font-bold text-2xl text-center pt-3">Stopwatch</h1>
+        <hr class="w-[90%] mr-auto ml-auto border-emerald-600 border-2 rounded">
+        <div
+            class="mt-5 mb-10 flex justify-center bg-slate-600 w-max mr-auto ml-auto text-4xl max-[400px]:text-3xl rounded">
+            <h1 class="font-extrabold w-10 m-5 max-[400px]:m-4" id="Jam"></h1>
+            <h1 class="font-extrabold w-10 m-5 max-[400px]:m-4" id="Menit"></h1>
+            <h1 class="font-extrabold w-10 m-5 max-[400px]:m-4" id="Detik"></h1>
+            <h1 class="font-extrabold w-10 m-5 max-[400px]:m-4" id="MiliDetik"></h1>
+        </div>
+        <span class="w-full flex" id="str"><button type="button"
+                class="w-40 rounded p-1 overflow-hidden mr-auto ml-auto bg-emerald-500 hover:bg-emerald-600 text-3xl duration-300"
+                id="Start">START</button></span>
+        <span class="w-full flex justify-center">
+            <button type="button"
+                class="w-0 rounded overflow-hidden bg-emerald-500 hover:bg-emerald-600 text-3xl duration-300"
+                id="refresh">🔄</button>
+            <button type="button"
+                class="w-0 rounded overflow-hidden bg-emerald-500 hover:bg-emerald-600 text-3xl duration-300"
+                id="Stop/resume">STOP</button>
+            <button type="button"
+                class="w-0 rounded overflow-hidden bg-emerald-500 hover:bg-emerald-600 text-3xl duration-300"
+                id="mark">⏱</button>
+        </span>
+        <div class="w-72 mr-auto ml-auto bg-slate-500 text-3xl duration-300 overflow-y-auto h-0" id="marker"></div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+
+</html>
