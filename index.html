@@ -34,6 +34,49 @@
                 id="mark">⏱</button>
         </span>
         <div class="w-72 mr-auto ml-auto bg-slate-500 text-3xl duration-300 overflow-y-auto h-0" id="marker"></div>
+        <span class="w-full inline-block text-center"><input type="text" id="inputsave"
+                class="w-0 mr-auto ml-auto text-black outline-emerald-500 rounded-sm mt-1 duration-300"
+                placeholder="nama untuk di simpan"></span>
+        <div class="w-0 mr-auto ml-auto bg-emerald-600 text-center text-2xl mt-1 rounded-sm overflow-hidden duration-500 cursor-pointer hover:bg-emerald-700"
+            id="save">
+            SIMPAN
+        </div>
+    </section>
+    <section class="fixed inset-x-0 top-0 bottom-[200%] duration-300 bg-black" id="locStorgSect">
+        <section class="fixed top-5 left-5 right-5 bottom-[200%] duration-300 bg-slate-500 rounded overflow-auto"
+            id="locStorgSect2">
+            <p id="ls1" class="text-center text-3xl font-semibold bg-blue-600 w-[90%] mr-auto ml-auto rounded-sm mt-2">
+            </p>
+            <div class="bg-gray-800 text-3xl w-full" id="getItem1"></div>
+            <p id="ls2" class="text-center text-3xl font-semibold mt-20 bg-blue-600 w-[90%] mr-auto ml-auto rounded-sm">
+            </p>
+            <div class="bg-gray-800 text-3xl w-full" id="getItem2"></div>
+            <p id="ls3" class="text-center text-3xl font-semibold mt-20 bg-blue-600 w-[90%] mr-auto ml-auto rounded-sm">
+            </p>
+            <div class="bg-gray-800 text-3xl w-full" id="getItem3"></div>
+            <p id="ls4" class="text-center text-3xl font-semibold mt-20 bg-blue-600 w-[90%] mr-auto ml-auto rounded-sm">
+            </p>
+            <div class="bg-gray-800 text-3xl w-full" id="getItem4"></div>
+            <p id="ls5" class="text-center text-3xl font-semibold mt-20 bg-blue-600 w-[90%] mr-auto ml-auto rounded-sm">
+            </p>
+            <div class="bg-gray-800 text-3xl w-full" id="getItem5"></div>
+            <div class="w-[90%] mr-auto ml-auto">
+                <input type="text" class="w-full p-3 text-black outline-emerald-500 rounded-sm mt-1 duration-300"
+                    placeholder="klik nama untuk menghapus" id="inputDelet" readonly>
+                <button type="button" class=" hover:bg-emerald-800 bg-emerald-900 w-full rounded-sm text-2xl mt-1"
+                    id="delet">HAPUS</button>
+            </div>
+        </section>
+    </section>
+    <section class="fixed inset-x-0 top-0 bottom-[200%] duration-300 bg-black" id="Sett">
+        <section class="fixed top-5 left-5 right-5 bottom-[200%] duration-300 bg-slate-500 rounded overflow-auto"
+            id="Sett2">
+            <h1 class="text-center text-2xl">MALAS STYLING</h1>
+        </section>
+    </section>
+    <section class="fixed bottom-0 h-10 flex justify-center inset-x-0 w-full">
+        <div class="text-center w-1/2 bg-emerald-900 text-3xl cursor-pointer" id="ls">saving</div>
+        <div class="text-center w-1/2 bg-emerald-900 text-3xl cursor-pointer" id="sett">setting</div>
     </section>
     <script src="./script.js"></script>
 </body>
